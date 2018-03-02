@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+#export DH_VERBOSE=1
+
+include /usr/share/mpi-default-dev/debian_defaults
+
+DEB_BUILD_ARCH_CPU=$(shell dpkg-architecture -qDEB_BUILD_ARCH_CPU)
+
+export SCALAPACK_LIBS:=-lscalapack-$(ARCH_DEFAULT_MPI_IMPL) -lblacs-$(ARCH_DEFAULT_MPI_IMPL) -lblacsF77init-$(ARCH_DEFAULT_MPI_IMPL)
+export SCALAPACK_LIB:=/usr/lib
+ifeq ($(DEB_BUILD_ARCH_CPU), i386)
+    export FFTW_FORCE_ALIGN=-D_FFTW_FORCE_UNALIGNED
+else
+    export FFTW_FORCE_ALIGN=
+endif
+export OMPI_MCA_orte_rsh_agent=/bin/false
+
+%:
+	dh $@ --with autotools_dev --parallel
+
+# override_dh_auto_configure:
+# 	dh_auto_configure -- 					\
+#		--with-elpa-include=-I/usr/include/elpa/modules	\
+# 		--with-elpa-lib=-lelpa
+
+override_dh_auto_clean:
+	-dh_auto_clean
+	rm -f install/clean
+
+override_dh_auto_build:
+	$(MAKE) all
+
+# ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+# override_dh_auto_test:
+# 	-(cd test-suite; $(MAKE) run-tests)
+# endif
+
+override_dh_installchangelogs:
+	dh_installchangelogs Doc/release-notes
+
+build-indep: override_dh_auto_configure
+	$(MAKE) pw
+	(cd pseudo; ../PW/src/generate_vdW_kernel_table.x)
+	(cd pseudo; ../PW/src/generate_rVV10_kernel_table.x)
+	(cd Doc; $(MAKE))
+
+binary-indep:
+	dh $@ --after dh_auto_test --with autotools_dev --parallel
+
+binary: binary-arch binary-indep

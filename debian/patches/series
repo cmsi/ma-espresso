@@ -1,0 +1,3 @@
+install_bindir.patch
+pseudopotential_dir.patch
+clean.path

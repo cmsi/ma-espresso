@@ -1,0 +1,241 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: espresso
+Source: http://qe-forge.org/frs/?group_id=10
+
+Files: *
+Copyright: 2001-2007 PWSCF group
+           2001-2017 Quantum ESPRESSO group
+Comment: PWSCF is the old name of Quantum ESPRESSO.
+  Upstream Authors are:
+  Paolo Giannozzi, Stefano Baroni, Nicola Bonini, Matteo Calandra, Roberto Car,
+  Carlo Cavazzoni, Davide Ceresoli, Guido L. Chiarotti, Matteo Cococcioni,
+  Ismaila Dabo, Andrea Dal Corso, Stefano Fabris, Guido Fratesi, Stefano de
+  Gironcoli, Ralph Gebauer, Uwe Gerstmann, Christos Gougoussis, Anton Kokalj,
+  Michele Lazzeri, Layla Martin-Samos, Nicola Marzari, Francesco Mauri,
+  Riccardo Mazzarello, Stefano Paolini, Alfredo Pasquarello, Lorenzo Paulatto,
+  Carlo Sbraccia, Sandro Scandolo, Gabriele Sclauzero, Ari P. Seitsonen,
+  Alexander Smogunov, Paolo Umari, Renata M. Wentzcovitch
+License: GPL-2
+
+Files: PW/bp_*
+Copyright: 2004 Vanderbilt group
+License: GPL-2
+
+Files: PW/generate_vdW_kernel_table.f90
+Copyright: 2009 Brian Kolb, Timo Thonhauser
+License: GPL-2
+
+Files: PW/h_epsi_her_*
+Copyright: 2005 Paolo Umari
+License: GPL-2
+
+Files: PW/wannier_*
+Copyright: 2008 Dmitry Korotin
+License: GPL-2
+
+Files: CPV/atoms_type.f90 CPV/berry_phase.f90 CPV/cg.f90 CPV/cp_emass.f90
+       CPV/cpr_mod.f90 CPV/dforceb.f90 CPV/efield.f90 CPV/eigs0.f90
+       CPV/ensemble_dft.f90 CPV/entropy.f90 CPV/fromscra.f90
+       CPV/inner_loop_cold.f90 CPV/ions_nose.f90 CPV/ions_positions.f90
+       CPV/ksstates.f90 CPV/mainvar.f90 CPV/metaxc.f90 CPV/nl_base.f90
+       CPV/polarization.f90 CPV/potentials.f90 CPV/pres_ai_mod.f90
+       CPV/print_out.f90 CPV/problem_size.f90 CPV/qmatrixd.f90 CPV/qqberry.f90
+       CPV/read_pseudo.f90 CPV/runcp.f90 CPV/spline.f90 CPV/stress.f90
+       CPV/wave_types.f90
+Copyright: 2002-2005 FPMD-CPV groups
+License: GPL-2
+
+Files: CPV/cp_autopilot.f90
+Copyright: 2005 Targacept, Inc.
+License: GPL-2
+
+Files: atomic/dir_outward.f90 atomic/dirsol.f90
+Copyright: 2002 Vanderbilt group
+License: GPL-2
+
+Files: clib/eval_infix.c
+Copyright: 2008 www.guidealgoritmi.it
+License: GPL-2
+
+Files: clib/fft_stick.c clib/indici.c clib/konst.h clib/memstat.c clib/qsort.c
+Copyright: 2002 FPMD group
+License: GPL-2
+
+Files: clib/fftw.* clib/konst.h
+Copyright: 1997 Massachusetts Institute of Technology
+License: GPL-2
+
+Files: clib/md5.h
+Copyright: 1999, 2002 Aladdin Enterprises
+License: GPL-2
+
+Files: flib/avrec.f90 flibe/transto.f90 flib/distools.f90
+       flib/more_functionals.f90
+Copyright: 2001-2002 FPMD group
+License: GPL-2
+
+Files: flib/deviatoric.f90
+Copyright: 2010 Davide Ceresoli
+License: GPL-2
+
+Files: flib/iglocal.f90
+Copyright: 2001-2004 Carlo Cavazzoni
+License: GPL-2
+
+Files: flib/flush_unit.f90
+Copyright: 2005 PWSCF-FPMD-CPV groups
+License: GPL-2
+
+Files: flib/sph_dbes.f90
+Copyright: 2001-2004 PWSCF-FPMD-CP90 group
+License: GPL-2
+
+Files: Modules/autopilot.f90
+Copyright: 2005 Targacept, Inc.
+License: GPL-2
+
+Files: Modules/descriptors.f90 Modules/fft_types.f90 Modules/printout_base.f90
+       Modules/timestep.f90 Modules/sic.f90 Modules/wave_base.f90
+       Modules/wavefunctions.f90 
+Copyright: 2002 FPMD group
+License: GPL-2
+
+Files: Modules/kernel_table.f90 Modules/xc_vdW_DF.f90
+Copyright: 2009 Brian Kolb, Timo Thonhauser
+License: GPL-2
+
+Files: Modules/mm_dispersion.f90
+Copyright: 2009 D. Forrer, M. Pavone
+License: GPL-2
+
+Files: Modules/parallel_include.f90
+Copyright: 2003-2004 Carlo Cavazzoni
+License: GPL-2
+
+Files: Modules/wannier_new.f90
+Copyright: 2006-2008 Dmitry Korotin
+License: GPL-2
+
+Files: NEB/path_interpolation.sh
+Copyright: 2004 Carlo Sbraccia
+License: GPL-2
+
+Files: NEB/path_merge.sh
+Copyright: 2007 Guido Fratesi
+License: GPL-2
+
+Files: PlotPhon/*
+Copyright: 2006-2007 Eyvaz Isaev
+License: GPL-2
+
+Files: PP/cft.f90
+Copyright: CERN
+License: GPL-2
+
+Files: PP/cube.f90
+Copyright: 2004 Axel Kohlmeyer
+License: GPL-2
+
+Files: PP/plot_whole_cell.f90
+Copyright: 2004 Tone Kokalj
+License: GPL-2
+
+Files: PP/qexml_example.f90
+Copyright: 2010 A. Ferretti
+License: GPL-2
+
+Files: PP/qexml.f90
+Copyright: 2006 WanT Group
+License: GPL-2
+
+Files: PP/sumpdos.f90
+Copyright: 2005 Andrea Ferretti
+License: GPL-2
+
+Files: PP/wannier_*0
+Copyright: 2006-2008 Dmitry Korotin
+License: GPL-2
+
+Files: PP/wfdd.f90
+Copyright: 2005 MANU, Yudong Wu, Nicola Marzari, Roberto Car
+License: GPL-2
+
+Files: PP/xsf.f90
+Copyright: 2003 Tone Kokalj
+License: GPL-2
+
+Files: PWCOND/*
+Copyright: 2003 A. Smogunov
+License: GPL-2
+
+Files: pwtools/bands_FS pwtools/f90 pwtools/kvecs_FS.f
+Copyright: 2005 Eyvaz Isaev
+License: GPL-2
+
+Files: pwtools/md_analyzer.sh
+Copyright: 2004 Guido Fratesi
+License: GPL-2
+
+Files: pwtools/pwi2xsf.sh pwtools/pwo2xsf.sh
+Copyright: 2004 Anton Kokalj
+License: GPL-2
+
+Files: pwtools/qeout2axsf.sh
+Copyright: 2006 Carlo Sbraccia
+License: GPL-2
+
+Files: QHA/*
+Copyright: 2005-2008 Eyvaz Isaev
+License: GPL-2
+
+Files: TDDFPT/*
+Copyright: 2009 Osman Baris Malcioglu
+License: GPL-2
+
+Files: TDDFPT/src/lr_charg_resp.f90
+Copyright: 2003 Tone Kokalj
+License: GPL-2
+
+Files: upftools/casino2upf.f90 upftools/upf2casino.f90
+Copyright: 2008, 2011 Simon Binnie
+License: GPL-2
+
+Files: debian/*
+Copyright: 2011-2014 Michael Banck <mbanck@debian.org>
+License: GPL-2
+
+License: GPL-2
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2 as
+ published by the Free Software Foundation.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+Files: extlibs/archive/iotk-1.2.beta.tar.gz S3DE/*
+Copyright: 2004-2006 Giovanni Bussi
+Comment: The external iotk library as found in archive/iotk-1.2.beta.tar.gz is
+  getting extracted to S3DE during the build.
+License: LGPL-2
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License version 2 as published by the Free Software Foundation
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2".

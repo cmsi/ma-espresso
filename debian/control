@@ -1,0 +1,70 @@
+Source: espresso
+Section: science
+Priority: optional
+Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org> and Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>
+Build-Depends: autotools-dev (>> 20100122.1~),
+               debhelper (>= 7.0.50~),
+               gfortran,
+               libblacs-mpi-dev,
+               libblas-dev,
+               libfftw3-dev,
+               liblapack-dev,
+               libscalapack-mpi-dev,
+               mpi-default-dev,
+               tcl,
+               tcllib,
+               xsltproc
+Standards-Version: 3.9.6
+Homepage: http://www.quantum-espresso.org/
+
+Package: quantum-espresso
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: quantum-espresso-data
+Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite
+ Quantum ESPRESSO (formerly known as PWscf) is an integrated suite of computer
+ codes for electronic-structure calculations and materials modeling at the
+ nanoscale. It is based on density-functional theory, plane waves, and
+ pseudopotentials (both norm-conserving, ultrasoft, and PAW).
+ .
+ Features include:
+  * Ground-state single-point and band structure calculations using plane-wave
+    self-consistent total energies, forces and stresses
+  * Separable norm-conserving and ultrasoft (Vanderbilt) pseudo-potentials, PAW
+    (Projector Augmented Waves)
+  * Various exchange-correlation functionals, from LDA to generalized-gradient
+    corrections (PW91, PBE, B88-P86, BLYP) to meta-GGA, exact exchange (HF) and
+    hybrid functionals (PBE0, B3LYP, HSE)
+  * Car-Parrinello and Born-Oppenheimer Molecular Dynamics
+  * Structural Optimization including transition states and minimum energy
+    paths
+  * Spin-orbit coupling and noncollinear magnetism
+  * Response properties including phonon frequencies and
+    eigenvectors, effective charges and dielectric tensors, Infrared and
+    Raman cross-sections, EPR and NMR chemical shifts
+  * Spectroscopic properties like K- and L1-edge X-ray Absorption Spectra (XAS)
+    and electronic excitations
+
+Package: quantum-espresso-data
+Architecture: all
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Replaces: quantum-espresso (<< 5.0.2-1)
+Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite (Documentation)
+ Quantum ESPRESSO is an integrated suite of computer codes for
+ electronic-structure calculations and materials modeling at the nanoscale. It
+ is based on density-functional theory, plane waves, and pseudopotentials (both
+ norm-conserving, ultrasoft, and PAW).
+ .
+ This package contains a limited set of pseudo-potentials and example files.
+
+Package: quantum-espresso-test-suite
+Architecture: all
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Replaces: quantum-espresso (<< 5.0.2-1)
+Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite (Documentation)
+ Quantum ESPRESSO is an integrated suite of computer codes for
+ electronic-structure calculations and materials modeling at the nanoscale. It
+ is based on density-functional theory, plane waves, and pseudopotentials (both
+ norm-conserving, ultrasoft, and PAW).
+ .
+ This package contains a test suite.
