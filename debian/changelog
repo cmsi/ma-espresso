@@ -1,3 +1,9 @@
+espresso (6.2.1-2) unstable; urgency=medium
+
+  * Add environment_variables in /usr/share/espress/examples.
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Wed, 20 Jun 2018 19:44:00 +0900
+
 espresso (6.2.1-1) unstable; urgency=medium
 
   * New upstream (6.2.1)

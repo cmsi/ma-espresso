@@ -17,7 +17,7 @@ endif
 export OMPI_MCA_orte_rsh_agent=/bin/false
 
 %:
-	dh $@ --with autotools_dev --parallel
+	dh $@ --with autotools_dev
 
 # override_dh_auto_configure:
 # 	dh_auto_configure -- 					\
@@ -30,6 +30,9 @@ override_dh_auto_clean:
 
 override_dh_auto_build:
 	$(MAKE) all
+	(cd pseudo; ../PW/src/generate_vdW_kernel_table.x)
+	(cd pseudo; ../PW/src/generate_rVV10_kernel_table.x)
+	(cd Doc; $(MAKE))
 
 # ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 # override_dh_auto_test:
@@ -38,14 +41,3 @@ override_dh_auto_build:
 
 override_dh_installchangelogs:
 	dh_installchangelogs Doc/release-notes
-
-build-indep: override_dh_auto_configure
-	$(MAKE) pw
-	(cd pseudo; ../PW/src/generate_vdW_kernel_table.x)
-	(cd pseudo; ../PW/src/generate_rVV10_kernel_table.x)
-	(cd Doc; $(MAKE))
-
-binary-indep:
-	dh $@ --after dh_auto_test --with autotools_dev --parallel
-
-binary: binary-arch binary-indep

@@ -1,3 +1,4 @@
 pseudo			/usr/share/espresso
 examples		/usr/share/espresso
 Doc/user_guide/* 	/usr/share/doc/quantum-espresso/html
+debian/environment_variables	/usr/share/espresso/examples/
