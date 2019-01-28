@@ -1,21 +1,25 @@
 Source: espresso
 Section: science
 Priority: optional
-Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org> and Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>
-Build-Depends: autotools-dev (>> 20100122.1~),
-               debhelper (>= 7.0.50~),
+Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org>
+Uploaders: Michael Banck <mbanck@debian.org>
+Build-Depends: debhelper (>= 11),
                gfortran,
-               libblacs-mpi-dev,
+               latex2html,
                libblas-dev,
+               libelpa-dev (>= 2016.05.001),
                libfftw3-dev,
                liblapack-dev,
                libscalapack-mpi-dev,
                mpi-default-dev,
+               netpbm,
                tcl,
                tcllib,
                xsltproc
-Standards-Version: 3.9.6
+Standards-Version: 4.2.0
 Homepage: http://www.quantum-espresso.org/
+Vcs-Browser: https://salsa.debian.org/debichem-team/espresso
+Vcs-Git: https://salsa.debian.org/debichem-team/espresso.git
 
 Package: quantum-espresso
 Architecture: any
@@ -48,7 +52,8 @@ Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite
 Package: quantum-espresso-data
 Architecture: all
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Replaces: quantum-espresso (<< 5.0.2-1)
+Breaks: quantum-espresso (<< 6.3-1)
+Replaces: quantum-espresso (<< 6.3-1)
 Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite (Documentation)
  Quantum ESPRESSO is an integrated suite of computer codes for
  electronic-structure calculations and materials modeling at the nanoscale. It
@@ -56,15 +61,3 @@ Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite (Docume
  norm-conserving, ultrasoft, and PAW).
  .
  This package contains a limited set of pseudo-potentials and example files.
-
-Package: quantum-espresso-test-suite
-Architecture: all
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Replaces: quantum-espresso (<< 5.0.2-1)
-Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite (Documentation)
- Quantum ESPRESSO is an integrated suite of computer codes for
- electronic-structure calculations and materials modeling at the nanoscale. It
- is based on density-functional theory, plane waves, and pseudopotentials (both
- norm-conserving, ultrasoft, and PAW).
- .
- This package contains a test suite.
