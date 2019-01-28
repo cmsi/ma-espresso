@@ -1,6 +1,6 @@
 --- a/install/make.inc.in
 +++ b/install/make.inc.in
-@@ -164,4 +164,6 @@
+@@ -187,4 +187,6 @@
  WGET = @wget@
  
  # Install directory - not currently used
@@ -10,10 +10,10 @@
 +bindir = @bindir@
 --- a/Makefile
 +++ b/Makefile
-@@ -270,11 +270,11 @@
+@@ -264,11 +264,11 @@
  #########################################################
  
- install : touch-dummy
+ install : 
 -	@if test -d bin ; then mkdir -p $(PREFIX)/bin ; \
 +	@if test -d bin ; then mkdir -p $(DESTDIR)$(bindir) ; \
  	for x in `find * ! -path "test-suite/*" -name *.x -type f` ; do \
