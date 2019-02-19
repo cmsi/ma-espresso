@@ -9,7 +9,7 @@ nanoscale. It is based on density-functional theory, plane waves, and  pseudopot
 
 ### Version
 
-* 6.2.1-2 (20 Jun 2018)
+* 6.3 (20 Jun 2018)
  
 ### Provided packages
 

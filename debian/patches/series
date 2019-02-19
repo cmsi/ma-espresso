@@ -8,3 +8,5 @@ make-install-PHONY.patch
 fix_example_scripts.patch
 disable_pseudo_download.patch
 fix-911763.patch
+install.patch
+environment_variables.patch

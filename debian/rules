@@ -32,20 +32,17 @@ override_dh_auto_build-arch:
 	$(MAKE) all
 
 override_dh_auto_build-indep:
-	$(MAKE) pw doc
+	$(MAKE) pw
 	cp debian/pseudo/*.UPF pseudo/
 	(cd pseudo; ../PW/src/generate_vdW_kernel_table.x)
 	(cd pseudo; ../PW/src/generate_rVV10_kernel_table.x)
 
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 override_dh_auto_test:
-	cp debian/pseudo/*.UPF pseudo/
-	-(cd test-suite; $(MAKE) run-tests)
-endif
+	/bin/true
 
 override_dh_installexamples-indep:
 	for DIR in $$(find . -name debian -prune -o -name .pc -prune -o -name examples -print); \
-	do dh_install -p quantum-espresso-data $$DIR/* usr/share/doc/quantum-espresso/examples/$$(dirname $$DIR); \
+	do dh_install -p quantum-espresso-data $$DIR/* usr/share/espresso/examples/$$(dirname $$DIR)/examples; \
 	done
 
 override_dh_installchangelogs:
@@ -53,4 +50,4 @@ override_dh_installchangelogs:
 
 override_dh_fixperms-indep:
 	dh_fixperms
-	find debian/quantum-espresso-data/usr/share/doc/quantum-espresso/examples -name \*.in | xargs chmod 644
+	find debian/quantum-espresso-data/usr/share/espresso/examples -name \*.in | xargs chmod 644

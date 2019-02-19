@@ -2,8 +2,10 @@ espresso (6.3-1) unstable; urgency=medium
 
   * Import 6.3-4 for sid
   * Remove Elpa support
+  * Install PDF userguide instead of HTML
+  * Skip tests
 
- -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Mon, 28 Jan 2019 19:05:36 +0900
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Tue, 19 Feb 2019 12:36:07 +0900
 
 espresso (6.2.1-2) unstable; urgency=medium
 
