@@ -9,7 +9,7 @@ nanoscale. It is based on density-functional theory, plane waves, and  pseudopot
 
 ### Version
 
-* 6.3.0-1 (19 Feb 2019)
+* 6.3.0-2 (26 Feb 2019)
  
 ### Provided packages
 
@@ -24,7 +24,7 @@ nanoscale. It is based on density-functional theory, plane waves, and  pseudopot
 
 ### For users
 
-* How to install ALPS Core
+* How to install Quantum ESPRESSO
 
   1. Add MateriApps LIVE! apt repository to Debian [[English](https://github.com/cmsi/MateriAppsLive/wiki/UsingMateriAppsInDebian-en)][[日本語](https://github.com/cmsi/MateriAppsLive/wiki/UsingMateriAppsInDebian)]
 

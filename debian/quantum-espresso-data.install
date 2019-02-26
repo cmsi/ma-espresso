@@ -1,3 +1,4 @@
 pseudo			/usr/share/espresso
-Doc/user_guide.pdf	/usr/share/doc/quantum-espresso
+Doc/user_guide.pdf	/usr/share/espresso
 environment_variables	/usr/share/espresso/examples
+debian/changelog.sid usr/share/doc/quantum-espresso-data

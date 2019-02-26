@@ -1,6 +1,13 @@
+espresso (6.3-2) unstable; urgency=medium
+
+  * Add changelog.sid
+  * Add -ffpe-summary=none option
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Tue, 26 Feb 2019 09:47:42 +0900
+
 espresso (6.3-1) unstable; urgency=medium
 
-  * Import 6.3-4 for sid
+  * Import 6.3-4 from sid
   * Remove Elpa support
   * Install PDF userguide instead of HTML
   * Skip tests

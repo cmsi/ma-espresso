@@ -6,6 +6,11 @@
 include /usr/share/dpkg/architecture.mk
 include /usr/share/mpi-default-dev/debian_defaults
 
+DEB_RELEASE ?= $(shell lsb_release -c -s)
+ifneq ($(DEB_RELEASE), wheezy)
+    export FFLAGS+=-ffpe-summary=none $(shell dpkg-buildflags --get FFLAGS)
+endif
+
 export SCALAPACK_LIBS:=-lscalapack-$(ARCH_DEFAULT_MPI_IMPL) -lblacs-$(ARCH_DEFAULT_MPI_IMPL) -lblacsF77init-$(ARCH_DEFAULT_MPI_IMPL)
 export SCALAPACK_LIB:=/usr/lib
 ifeq ($(DEB_BUILD_ARCH_CPU), i386)
