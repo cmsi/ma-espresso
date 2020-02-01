@@ -9,7 +9,7 @@ nanoscale. It is based on density-functional theory, plane waves, and  pseudopot
 
 ### Version
 
-* 6.3.0-2 (26 Feb 2019)
+* 6.5.0-1 (1 Feb 2020)
  
 ### Provided packages
 
@@ -21,6 +21,8 @@ nanoscale. It is based on density-functional theory, plane waves, and  pseudopot
 * Debian stretch (amd64, i386)
 * Debian jessie (amd64, i386)
 * Debian wheezy (amd64, i386)
+* Ubuntu Xenial (amd64)
+* Ubuntu Bionic (amd64)
 
 ### For users
 
@@ -39,9 +41,9 @@ nanoscale. It is based on density-functional theory, plane waves, and  pseudopot
 * How to prepare original source tarball
 
   ```
-  VERSION=6.3
-  wget https://github.com/QEF/q-e/releases/download/qe-$VERSION/qe-$VERSION.tar.gz
-  tar zxvf qe-$VERSION.tar.gz
+  VERSION=6.5
+  wget https://github.com/QEF/q-e/releases/download/qe-$VERSION/qe-$VERSION-ReleasePack.tgz
+  tar zxvf qe-$VERSION-ReleasePack.tgz
   mv -f qe-$VERSION espresso_$VERSION
   tar zcvf espresso_$VERSION.orig.tar.gz espresso_$VERSION
   rm -rf qe-$VERSION-*.tar.gz espresso_$VERSION

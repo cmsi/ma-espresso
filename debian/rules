@@ -11,13 +11,20 @@ ifneq ($(DEB_RELEASE), wheezy)
     export FFLAGS+=-ffpe-summary=none $(shell dpkg-buildflags --get FFLAGS)
 endif
 
-export SCALAPACK_LIBS:=-lscalapack-$(ARCH_DEFAULT_MPI_IMPL) -lblacs-$(ARCH_DEFAULT_MPI_IMPL) -lblacsF77init-$(ARCH_DEFAULT_MPI_IMPL)
+ifeq ($(DEB_RELEASE), buster)
+    export SCALAPACK_LIBS:=-lscalapack-$(ARCH_DEFAULT_MPI_IMPL)
+else ifeq ($(DEB_RELEASE), bionic)
+    export SCALAPACK_LIBS:=-lscalapack-$(ARCH_DEFAULT_MPI_IMPL)
+else
+    export SCALAPACK_LIBS:=-lscalapack-$(ARCH_DEFAULT_MPI_IMPL) -lblacs-$(ARCH_DEFAULT_MPI_IMPL) -lblacsF77init-$(ARCH_DEFAULT_MPI_IMPL)
+endif
 export SCALAPACK_LIB:=/usr/lib
 ifeq ($(DEB_BUILD_ARCH_CPU), i386)
     export FFTW_FORCE_ALIGN=-D_FFTW_FORCE_UNALIGNED
 else
     export FFTW_FORCE_ALIGN=
 endif
+export LDFLAGS=-fopenmp
 export OMPI_MCA_orte_rsh_agent=/bin/false
 
 %:
@@ -33,14 +40,16 @@ override_dh_auto_clean:
 	rm -f Modules/version.f90.tmp
 	rm -f include/configure.h
 
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-openmp
+
 override_dh_auto_build-arch:
 	$(MAKE) all
 
 override_dh_auto_build-indep:
 	$(MAKE) pw
 	cp debian/pseudo/*.UPF pseudo/
-	(cd pseudo; ../PW/src/generate_vdW_kernel_table.x)
-	(cd pseudo; ../PW/src/generate_rVV10_kernel_table.x)
+	$(MAKE) -C Doc pdf
 
 override_dh_auto_test:
 	/bin/true

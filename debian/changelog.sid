@@ -1,3 +1,14 @@
+espresso (6.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches/pseudopotential_dir.patch: Refreshed. 
+  * debian/patches/install_bindir.patch: Updated.
+  * debian/patches/configure_fix_ppc64_define.patch: Refreshed.
+  * debian/patches/make-install-PHONY.patch: Likewise.
+  * debian/patches/disable_pseudo_download.patch: Updated.
+
+ -- Michael Banck <mbanck@debian.org>  Sat, 20 Jul 2019 09:41:45 -0300
+
 espresso (6.3-4) unstable; urgency=medium
 
   [ Andrius Merkys ]

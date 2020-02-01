@@ -5,16 +5,15 @@ Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org>
 Uploaders: Michael Banck <mbanck@debian.org>
 Build-Depends: debhelper,
                gfortran,
-               libblacs-mpi-dev,
                libblas-dev,
                libfftw3-dev,
                liblapack-dev,
                libscalapack-mpi-dev,
                mpi-default-dev,
+               latex2html,
                netpbm,
                tcl,
-               tcllib,
-               xsltproc
+               tcllib
 Standards-Version: 4.2.0
 Homepage: http://www.quantum-espresso.org/
 Vcs-Browser: https://salsa.debian.org/debichem-team/espresso

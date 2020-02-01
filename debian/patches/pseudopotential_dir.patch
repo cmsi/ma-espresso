@@ -1,10 +1,8 @@
 # use /usr/share/espresso/pseudo as directory for pseudo-potentials if the
 # environment variable is missing and $HOME/espresso/pseudo does not exist.
-Index: qe-6.0/Modules/read_namelists.f90
-===================================================================
---- qe-6.0.orig/Modules/read_namelists.f90
-+++ qe-6.0/Modules/read_namelists.f90
-@@ -20,6 +20,8 @@ MODULE read_namelists_module
+--- a/Modules/read_namelists.f90
++++ b/Modules/read_namelists.f90
+@@ -20,6 +20,8 @@
    !
    USE kinds,     ONLY : DP
    USE input_parameters
@@ -13,16 +11,16 @@ Index: qe-6.0/Modules/read_namelists.f90
    !
    IMPLICIT NONE
    !
-@@ -61,6 +63,8 @@ MODULE read_namelists_module
-        !
+@@ -61,6 +63,8 @@
         CHARACTER(LEN=2) :: prog   ! ... specify the calling program
+        CHARACTER(LEN=20) ::    temp_string 
         !
 +       INTEGER :: iunpse, ierr 
 +       !
         !
         IF ( prog == 'PW' ) THEN
            title = ' '
-@@ -103,6 +107,23 @@ MODULE read_namelists_module
+@@ -103,6 +107,23 @@
         IF ( TRIM( pseudo_dir ) == ' ') THEN
            CALL get_environment_variable( 'HOME', pseudo_dir )
            pseudo_dir = TRIM( pseudo_dir ) // '/espresso/pseudo/'
@@ -45,4 +43,4 @@ Index: qe-6.0/Modules/read_namelists.f90
 +          CALL delete_if_present( TRIM( pseudo_dir ) // '.x' )
         END IF
         !
-        refg          = 0.05_DP
+        ! ... max number of md steps added to the xml file. Needs to be limited for very long 

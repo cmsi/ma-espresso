@@ -1,3 +1,11 @@
+espresso (6.5-1) unstable; urgency=medium
+
+  * New upstream version 6.5
+  * Import 6.4-1 from sid
+  * Workaround for gcc 6.3
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Sat, 01 Feb 2020 09:54:00 +0900
+
 espresso (6.3-2) unstable; urgency=medium
 
   * Add changelog.sid

@@ -7,12 +7,12 @@ Last-Update: 2018-08-23
 
 --- a/Makefile
 +++ b/Makefile
-@@ -263,6 +263,8 @@
- # - If the final directory does not exists it creates it
- #########################################################
+@@ -295,6 +295,8 @@
+ # - If the PREFIX/bin directory does not exists it creates it
+ #############################################################
  
 +.PHONY: install
 +
  install : 
- 	@if test -d bin ; then mkdir -p $(DESTDIR)$(bindir) ; \
+ 	mkdir -p $(DESTDIR)$(bindir) ; \
  	for x in `find * ! -path "test-suite/*" -name *.x -type f` ; do \
