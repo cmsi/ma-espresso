@@ -1,6 +1,6 @@
 --- a/install/make.inc.in
 +++ b/install/make.inc.in
-@@ -188,4 +188,6 @@
+@@ -198,4 +198,6 @@
  WGET = @wget@
  
  # Install directory - "make install" copies *.x executables there
@@ -10,7 +10,7 @@
 +bindir = @bindir@
 --- a/Makefile
 +++ b/Makefile
-@@ -296,10 +296,10 @@
+@@ -297,10 +297,10 @@
  #############################################################
  
  install : 

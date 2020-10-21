@@ -1,6 +1,6 @@
 --- a/test-suite/Makefile
 +++ b/test-suite/Makefile
-@@ -34,12 +34,6 @@
+@@ -32,12 +32,6 @@
  	@sed "s|XXXXXX|$(ESPRESSO_ROOT)|g" < userconfig.tmp > userconfig
  
  pseudo :

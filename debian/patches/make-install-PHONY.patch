@@ -7,7 +7,7 @@ Last-Update: 2018-08-23
 
 --- a/Makefile
 +++ b/Makefile
-@@ -295,6 +295,8 @@
+@@ -296,6 +296,8 @@
  # - If the PREFIX/bin directory does not exists it creates it
  #############################################################
  

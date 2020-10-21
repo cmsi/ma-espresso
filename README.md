@@ -41,7 +41,7 @@ nanoscale. It is based on density-functional theory, plane waves, and  pseudopot
 * How to prepare original source tarball
 
   ```
-  VERSION=6.5
+  VERSION=6.6
   wget https://github.com/QEF/q-e/releases/download/qe-$VERSION/qe-$VERSION-ReleasePack.tgz
   tar zxvf qe-$VERSION-ReleasePack.tgz
   mv -f qe-$VERSION espresso_$VERSION

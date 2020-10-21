@@ -15,8 +15,8 @@
  
  # There should be no need to change anything below this line
  
-@@ -57,7 +57,7 @@
- # parallelism, do not run on too many processors
+@@ -58,7 +58,7 @@
+ 
  
  PARA_PREFIX=" "
 -PARA_PREFIX="mpirun -np 4"
@@ -24,7 +24,7 @@
  #
  # available flags: 
  #                  -ni n        number of images        (or -nimage)
-@@ -76,8 +76,8 @@
+@@ -77,8 +77,8 @@
  # number of processors in PARA_PREFIX and the number of images in
  # PARA_IMAGE_POSTFIX
  #
@@ -33,5 +33,5 @@
 +PARA_IMAGE_POSTFIX="-ni 1 $PARA_POSTFIX"
 +PARA_IMAGE_PREFIX=" "
  
- # function to test the exit status of a job
- check_failure () {
+ #
+ # In case of mixed MPI / OpenMP parallelization you may want to limit the maximum

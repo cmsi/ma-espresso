@@ -1,3 +1,9 @@
+espresso (6.6-1) unstable; urgency=medium
+
+  * New upstream version 6.6
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Tue, 20 Oct 2020 17:56:18 +0900
+
 espresso (6.5-1) unstable; urgency=medium
 
   * New upstream version 6.5
