@@ -1,7 +1,8 @@
-openmp.patch
 pseudopotential_dir.patch
 install_bindir.patch
 make-install-PHONY.patch
+fix_example_scripts.patch
 disable_pseudo_download.patch
 fix-911763.patch
+system_libwannier90.patch
 environment_variables.patch

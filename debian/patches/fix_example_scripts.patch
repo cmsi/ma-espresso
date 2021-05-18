@@ -1,19 +1,25 @@
 Description: adding shebangs to scripts under examples/.
 Author: Andrius Merkys <andrius.merkys@gmail.com>
---- a/atomic/examples/pseudo-test/clean.sh
-+++ b/atomic/examples/pseudo-test/clean.sh
+Index: espresso/atomic/examples/pseudo-test/clean.sh
+===================================================================
+--- espresso.orig/atomic/examples/pseudo-test/clean.sh
++++ espresso/atomic/examples/pseudo-test/clean.sh
 @@ -1,3 +1,4 @@
 +#!/bin/sh
  rm -rf results
  rm -f difference
  rm -f ld1*
---- a/atomic/examples/vdw-in-tfvw/clean.sh
-+++ b/atomic/examples/vdw-in-tfvw/clean.sh
+Index: espresso/atomic/examples/vdw-in-tfvw/clean.sh
+===================================================================
+--- espresso.orig/atomic/examples/vdw-in-tfvw/clean.sh
++++ espresso/atomic/examples/vdw-in-tfvw/clean.sh
 @@ -1 +1,2 @@
 +#!/bin/sh
  rm -r results *.out *.dat ld1*
---- a/CPV/examples/EXX-wf-example/example-job-script
-+++ b/CPV/examples/EXX-wf-example/example-job-script
+Index: espresso/CPV/examples/EXX-wf-example/example-job-script
+===================================================================
+--- espresso.orig/CPV/examples/EXX-wf-example/example-job-script
++++ espresso/CPV/examples/EXX-wf-example/example-job-script
 @@ -13,7 +13,7 @@
  
  cd $PBS_O_WORKDIR
@@ -23,43 +29,55 @@ Author: Andrius Merkys <andrius.merkys@gmail.com>
  
  # example of number of MPI tasks = 2 * number of electronic states
  # using 256 MPI tasks and 2 OpenMP threads per MPI tasks
---- a/EPW/examples/diamond/phonons/pp.py
-+++ b/EPW/examples/diamond/phonons/pp.py
+Index: espresso/EPW/examples/diamond/phonons/pp.py
+===================================================================
+--- espresso.orig/EPW/examples/diamond/phonons/pp.py
++++ espresso/EPW/examples/diamond/phonons/pp.py
 @@ -1,3 +1,4 @@
-+#!/usr/bin/python2
++#!/usr/bin/python3
  #
- # Post-processing script QE --> EPW 
+ # Post-processing script QE --> EPW
  # 14/07/2015 - Samuel Ponce
---- a/EPW/examples/sic/phonons/pp.py
-+++ b/EPW/examples/sic/phonons/pp.py
+Index: espresso/EPW/examples/sic/phonons/pp.py
+===================================================================
+--- espresso.orig/EPW/examples/sic/phonons/pp.py
++++ espresso/EPW/examples/sic/phonons/pp.py
 @@ -1,3 +1,4 @@
-+#!/usr/bin/python2
++#!/usr/bin/python3
  #
- # Post-processing script QE --> EPW 
+ # Post-processing script QE --> EPW
  # 14/07/2015 - Samuel Ponce
---- a/atomic/examples/all-electron/clean.sh
-+++ b/atomic/examples/all-electron/clean.sh
+Index: espresso/atomic/examples/all-electron/clean.sh
+===================================================================
+--- espresso.orig/atomic/examples/all-electron/clean.sh
++++ espresso/atomic/examples/all-electron/clean.sh
 @@ -1,2 +1,3 @@
 +#!/bin/sh
  rm -r results
  rm difference ld1.wfc*
---- a/atomic/examples/pseudo-gen/clean.sh
-+++ b/atomic/examples/pseudo-gen/clean.sh
+Index: espresso/atomic/examples/pseudo-gen/clean.sh
+===================================================================
+--- espresso.orig/atomic/examples/pseudo-gen/clean.sh
++++ espresso/atomic/examples/pseudo-gen/clean.sh
 @@ -1,3 +1,4 @@
 +#!/bin/sh
  rm -rf results
  rm -f difference
  rm -f ld1*
---- a/atomic/examples/pseudo-LDA-0.5/clean.sh
-+++ b/atomic/examples/pseudo-LDA-0.5/clean.sh
+Index: espresso/atomic/examples/pseudo-LDA-0.5/clean.sh
+===================================================================
+--- espresso.orig/atomic/examples/pseudo-LDA-0.5/clean.sh
++++ espresso/atomic/examples/pseudo-LDA-0.5/clean.sh
 @@ -1,2 +1,3 @@
 +#!/bin/sh
  rm -r -f results
  rm -r -f *CRASH*
---- a/EPW/examples/mgb2/phonons/pp.py
-+++ b/EPW/examples/mgb2/phonons/pp.py
+Index: espresso/EPW/examples/mgb2/phonons/pp.py
+===================================================================
+--- espresso.orig/EPW/examples/mgb2/phonons/pp.py
++++ espresso/EPW/examples/mgb2/phonons/pp.py
 @@ -1,3 +1,4 @@
-+#!/usr/bin/python2
++#!/usr/bin/python3
  #
- # Post-processing script QE --> EPW 
+ # Post-processing script QE --> EPW
  # 14/07/2015 - Samuel Ponce

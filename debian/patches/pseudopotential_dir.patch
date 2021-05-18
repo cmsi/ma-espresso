@@ -1,46 +1,21 @@
-# use /usr/share/espresso/pseudo as directory for pseudo-potentials if the
-# environment variable is missing and $HOME/espresso/pseudo does not exist.
---- a/Modules/read_namelists.f90
-+++ b/Modules/read_namelists.f90
-@@ -20,6 +20,8 @@
-   !
-   USE kinds,     ONLY : DP
-   USE input_parameters
-+  USE iotk_module, ONLY : iotk_free_unit, iotk_open_write, iotk_close_write
-+  USE io_files, ONLY : delete_if_present
-   !
-   IMPLICIT NONE
-   !
-@@ -61,6 +63,8 @@
-        CHARACTER(LEN=2) :: prog   ! ... specify the calling program
-        CHARACTER(LEN=20) ::    temp_string 
-        !
-+       INTEGER :: iunpse, ierr 
-+       !
-        !
-        IF ( prog == 'PW' ) THEN
-           title = ' '
-@@ -103,6 +107,23 @@
-        IF ( TRIM( pseudo_dir ) == ' ') THEN
-           CALL get_environment_variable( 'HOME', pseudo_dir )
-           pseudo_dir = TRIM( pseudo_dir ) // '/espresso/pseudo/'
-+          CALL iotk_free_unit( iunpse )
-+          ! 
-+          ! ... it is not obvious how to check for the existence of a
-+          ! ... directory with iotk, so we try to create a file in 
-+          ! ... $HOME/espresso/pseudo to see if that directory exists
-+          ! ... and remove the auxiliary file again afterwards
-+          !
-+          CALL iotk_open_write ( iunpse, FILE = TRIM( pseudo_dir ) // '.x', IERR=ierr )
-+          IF( ierr /= 0 ) THEN
-+             !
-+             ! ... use the system wide default
-+             !
-+             pseudo_dir = '/usr/share/espresso/pseudo/'
-+          ELSE
-+             CALL iotk_close_write( iunpse )
-+          END IF
-+          CALL delete_if_present( TRIM( pseudo_dir ) // '.x' )
-        END IF
-        !
-        ! ... max number of md steps added to the xml file. Needs to be limited for very long 
+--- ./Modules/read_pseudo.f90.orig	2021-01-06 21:12:10.962520449 +0100
++++ ./Modules/read_pseudo.f90	2021-01-06 21:15:21.523514195 +0100
+@@ -120,6 +120,18 @@
+         INQUIRE ( file = file_pseudo, EXIST = exst) 
+         IF (exst) ios = 0
+         CALL mp_sum (ios,intra_image_comm)
++        !CALL errore('readpp', 'file '//TRIM(file_pseudo)//' not found',ABS(ios))
++     END IF
++     !
++     ! file not found? no panic (yet): try the system location pseudo_dir
++     ! '/usr/share/espresso/pseudo/'
++     !
++     IF ( ios /= 0 ) THEN
++	pseudo_dir = '/usr/share/espresso/pseudo/'
++        file_pseudo = TRIM (pseudo_dir) // TRIM (psfile(nt))
++        INQUIRE ( file = file_pseudo, EXIST = exst) 
++        IF (exst) ios = 0
++        CALL mp_sum (ios,intra_image_comm)
+         CALL errore('readpp', 'file '//TRIM(file_pseudo)//' not found',ABS(ios))
+      END IF
+      !

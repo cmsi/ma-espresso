@@ -1,6 +1,8 @@
---- a/test-suite/Makefile
-+++ b/test-suite/Makefile
-@@ -32,12 +32,6 @@
+Index: espresso/test-suite/Makefile
+===================================================================
+--- espresso.orig/test-suite/Makefile
++++ espresso/test-suite/Makefile
+@@ -32,12 +32,6 @@ prolog :
  	@sed "s|XXXXXX|$(ESPRESSO_ROOT)|g" < userconfig.tmp > userconfig
  
  pseudo :

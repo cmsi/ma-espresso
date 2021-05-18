@@ -1,3 +1,10 @@
+espresso (6.7-1) unstable; urgency=medium
+
+  * New upstream version 6.7
+  * Import 6.7-2 from sid
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Mon, 17 May 2021 14:48:39 +0900
+
 espresso (6.6-1) unstable; urgency=medium
 
   * New upstream version 6.6

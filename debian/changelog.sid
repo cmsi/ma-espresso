@@ -1,3 +1,101 @@
+espresso (6.7-2) unstable; urgency=medium
+
+  [ Adrian Bunk ]
+  * debian/rules: Fix build with dpkg exporting DFLAGS (Closes: #980677).
+
+ -- Michael Banck <mbanck@debian.org>  Mon, 15 Feb 2021 11:25:34 +0100
+
+espresso (6.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/watch: Switch to Github. 
+  * debian/patches/install_bindir.patch: Refreshed.
+  * debian/patches/make-install-PHONY.patch: Likewise.
+  * debian/patches/fix-911763.patch: Likewise.
+  * debian/patches/system_libwannier90.patch: Likewise.
+  * debian/patches/fix_example_scripts.patch: Refreshed, and updated for
+    python3.
+  * debian/patches/pseudopotential_dir.patch: Reimplemented without iotk.
+
+ -- Michael Banck <mbanck@debian.org>  Wed, 06 Jan 2021 21:56:16 +0100
+
+espresso (6.6-1) unstable; urgency=medium
+
+  * New upstream release, new features include:
+   + vdW-DF3-opt1, vdW-DF3-opt2, and vdW-DF-C6 van der Waals functionals
+   + Stress for noncolinear case
+   + ParO and PPCG iterative diagonalization algorithms
+   + Fourier interpolation of phonon potential
+   + Extension of the PW code to DFT+U+V
+   + Extension of the HP code to compute also inter-site Hubbard V parameters
+   + Extension of the XSpectra code to work on top of DFT+U+V
+   + Extension of Hubbard forces and stress to ortho-atomic orbitals
+   + Support for BEEF-vdW XC
+   + Phonon-induced electron self-energy implemented in ph.x and a new
+     post-processing program PHonon/postahc.x added
+   + Implementation of the Sternheimer algorithm in the turboEELS code
+   + EPW: Use of the band manifold determined by Wannierization step when
+     evaluating electron-phonon vertex on coarse grids
+   + EPW: Support for PAW
+  * debian/patches/disable_pseudo_download.patch: Refreshed.
+  * debian/patches/fix-911763.patch: Likewise.
+  * debian/patches/install_bindir.patch: Likewise.
+  * debian/patches/make-install-PHONY.patch: Likewise.
+  * debian/patches/pseudopotential_dir.patch: Likewise.
+  * debian/patches/configure_fix_ppc64_define.patch: Removed, no longer needed.
+  * debian/patches/testsuite_python3.patch: Likewise.
+  * debian/pseudo/B.pbe-n-kjpaw_psl.1.0.0.UPF,B.pbe-n-kjpaw_psl.0.1.UPF,
+    B.pbe-n-rrkjus_psl.1.0.0.UPF,B.pz-vbc.UPF,
+    Co.pbesol-spn-rrkjus_psl.0.3.1.UPF,Cr.pbe-spn-kjpaw_psl.1.0.0.UPF,
+    Fe.pbe-spn-rrkjus_psl.0.2.1.UPF,Fe.pbesol-spn-kjpaw_psl.1.0.0.UPF,
+    Fe.rel-pbe-spn-rrkjus_psl.0.2.1.UPF,I.pbe-n-kjpaw_psl.1.0.0.UPF,
+    Li.pbesol-s-kjpaw_psl.0.2.1.UPF,Li.pbesol-s-rrkjus_psl.0.2.1.UPF,
+    Mg.pz-n-vbc.UPF,N.pbe-n-kjpaw_psl.0.1.UPF,N.pbe-n-kjpaw_psl.1.0.0.UPF,
+    N.pbe-n-rrkjus_psl.1.0.0.UPF,Ni.pbe-spn-kjpaw_psl.1.0.0.UPF,
+    Ni.pbesol-n-kjpaw_psl.0.1.UPF,Ni.pbesol-n-rrkjus_psl.0.1.UPF
+    O.pbesol-n-kjpaw_psl.0.1.UPF,O.pbesol-n-rrkjus_psl.0.1.UPF,
+    Si.pbe-nl-rrkjus_psl.1.0.0.UPF: New files, pseudopotentials needed for new
+    test cases.
+  * debian/patches/system_libwannier90.patch: New patch, forces usage of the
+    system-installed libwannier90.
+  * debian/rules (override_dh_auto_build-arch): Also build epw target.
+  * debian/rules (override_dh_auto_test): Add -k option to make in order to
+    continue on failed tests.
+
+ -- Michael Banck <mbanck@debian.org>  Mon, 04 Jan 2021 21:28:44 +0100
+
+espresso (6.5-2) unstable; urgency=medium
+
+  * debian/patches/testsuite_python3.patch: Updated with fix from upstream.
+  * debian/control (Build-Depends): Added libwannier90-dev.
+  * debian/rules (F90FLAGS): New variable, sets -fallow-argument-mismatch
+    (Closes: 966950).
+
+ -- Michael Banck <mbanck@debian.org>  Sat, 03 Oct 2020 14:05:05 +0200
+
+espresso (6.5-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches/disable_pseudo_download.patch: Updated. 
+  * debian/rules (override_dh_auto_build-indep): Stop build the kernel
+    tables, the executables are no longer there.
+  * debian/pseudo/Fe.pbe-mt_fhi.UPF,Fe.pbe-nd-rrkjus.UPF: New files,
+    pseudopotentials needed for new test cases.
+  * debian/patches/testsuite_python3.patch: New patch, ports the testsuite
+    module from python2 to python3.
+  * debian/control (Build-Depends): Added python3.
+
+ -- Michael Banck <mbanck@debian.org>  Sat, 04 Jul 2020 17:41:58 +0200
+
+espresso (6.4.1-2) unstable; urgency=medium
+
+  * debian/control (Build-Depends): Removed libelpa-dev.
+  * debian/rules (override_dh_auto_configure): Removed.
+  * debian/patches/elpa3_support.patch, debian/patches/elpa_2016.05.003.patch:
+    Deactivated for now.
+
+ -- Michael Banck <mbanck@debian.org>  Sat, 04 Jul 2020 10:21:47 +0200
+
 espresso (6.4.1-1) unstable; urgency=medium
 
   * New upstream release.

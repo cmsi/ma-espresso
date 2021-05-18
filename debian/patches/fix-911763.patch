@@ -5,9 +5,11 @@ https://github.com/andreww/fox/issues/4
 Author: Frédéric Bonnard <frediz@fdz.fr>
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
---- a/install/extlibs_makefile
-+++ b/install/extlibs_makefile
-@@ -88,7 +88,10 @@
+Index: espresso/install/extlibs_makefile
+===================================================================
+--- espresso.orig/install/extlibs_makefile
++++ espresso/install/extlibs_makefile
+@@ -58,7 +58,10 @@ libfox:
  	if test ! -d ../FoX; then \
          mkdir ../FoX; \
  	(gzip -dc ../archive/fox.tgz | (cd ../FoX; tar -xvf -)); \

@@ -5,9 +5,11 @@ Forwarded: https://gitlab.com/QEF/q-e/issues/50
 Author: Andrius Merkys <andrius.merkys@gmail.com>
 Last-Update: 2018-08-23
 
---- a/Makefile
-+++ b/Makefile
-@@ -296,6 +296,8 @@
+Index: espresso/Makefile
+===================================================================
+--- espresso.orig/Makefile
++++ espresso/Makefile
+@@ -260,6 +260,8 @@ links : bindir
  # - If the PREFIX/bin directory does not exists it creates it
  #############################################################
  
