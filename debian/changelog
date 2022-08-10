@@ -1,3 +1,9 @@
+espresso (7.0-1) unstable; urgency=medium
+
+  * New upstream version 7.0
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Wed, 10 Aug 2022 05:56:13 +0000
+
 espresso (6.7-1) unstable; urgency=medium
 
   * New upstream version 6.7
