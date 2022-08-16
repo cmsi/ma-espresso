@@ -1,64 +1,45 @@
 Source: espresso
 Section: science
 Priority: optional
-Maintainer: Debichem Team <debichem-devel@lists.alioth.debian.org>
-Uploaders: Michael Banck <mbanck@debian.org>
+Maintainer: Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>
 Build-Depends: debhelper,
                gfortran,
-               latex2html,
                libblas-dev,
                libfftw3-dev,
                liblapack-dev,
                libscalapack-mpi-dev,
-               wannier90,
-               mpi-default-dev,
-               netpbm,
-               python3,
-               tcl,
-               tcllib,
-               xsltproc
+               mpi-default-dev
 Standards-Version: 4.2.0
-Homepage: http://www.quantum-espresso.org/
-Vcs-Browser: https://salsa.debian.org/debichem-team/espresso
-Vcs-Git: https://salsa.debian.org/debichem-team/espresso.git
+Homepage: https://www.quantum-espresso.org/
 
 Package: quantum-espresso
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: quantum-espresso-data
-Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite
- Quantum ESPRESSO (formerly known as PWscf) is an integrated suite of computer
- codes for electronic-structure calculations and materials modeling at the
+Description: Electronic-Structure Calculations and Materials Modeling
+ Quantum ESPRESSO is an integrated suite of Open-Source computer codes
+ for electronic-structure calculations and materials modeling at the
  nanoscale. It is based on density-functional theory, plane waves, and
- pseudopotentials (both norm-conserving, ultrasoft, and PAW).
- .
- Features include:
-  * Ground-state single-point and band structure calculations using plane-wave
-    self-consistent total energies, forces and stresses
-  * Separable norm-conserving and ultrasoft (Vanderbilt) pseudo-potentials, PAW
-    (Projector Augmented Waves)
-  * Various exchange-correlation functionals, from LDA to generalized-gradient
-    corrections (PW91, PBE, B88-P86, BLYP) to meta-GGA, exact exchange (HF) and
-    hybrid functionals (PBE0, B3LYP, HSE)
-  * Car-Parrinello and Born-Oppenheimer Molecular Dynamics
-  * Structural Optimization including transition states and minimum energy
-    paths
-  * Spin-orbit coupling and noncollinear magnetism
-  * Response properties including phonon frequencies and
-    eigenvectors, effective charges and dielectric tensors, Infrared and
-    Raman cross-sections, EPR and NMR chemical shifts
-  * Spectroscopic properties like K- and L1-edge X-ray Absorption Spectra (XAS)
-    and electronic excitations
+ pseudopotentials.
 
 Package: quantum-espresso-data
 Architecture: all
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: quantum-espresso (<< 6.3-1)
-Replaces: quantum-espresso (<< 6.3-1)
-Description: Electronic-Structure and Ab-Initio Molecular Dynamics Suite (Documentation)
- Quantum ESPRESSO is an integrated suite of computer codes for
- electronic-structure calculations and materials modeling at the nanoscale. It
- is based on density-functional theory, plane waves, and pseudopotentials (both
- norm-conserving, ultrasoft, and PAW).
+Description: Electronic-Structure Calculations and Materials Modeling (Data)
+ Quantum ESPRESSO is an integrated suite of Open-Source computer codes
+ for electronic-structure calculations and materials modeling at the
+ nanoscale. It is based on density-functional theory, plane waves, and
+ pseudopotentials.
  .
  This package contains a limited set of pseudo-potentials and example files.
+
+Package: quantum-espresso-dev
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Electronic-Structure Calculations and Materials Modeling (Development)
+ Quantum ESPRESSO is an integrated suite of Open-Source computer codes
+ for electronic-structure calculations and materials modeling at the
+ nanoscale. It is based on density-functional theory, plane waves, and
+ pseudopotentials.
+ .
+ This package contains Quantum ESPRESSO libraries and include files.

@@ -1,4 +1,14 @@
 pseudo			/usr/share/espresso
 Doc/user_guide.pdf	/usr/share/espresso
 environment_variables	/usr/share/espresso/examples
-debian/changelog.sid usr/share/doc/quantum-espresso-data
+CPV/examples		/usr/share/espresso/examples/CPV
+EPW/examples		/usr/share/espresso/examples/EPW
+FFTXlib/examples	/usr/share/espresso/examples/FFTXlib
+GWW/examples		/usr/share/espresso/examples/GWW
+HP/examples		/usr/share/espresso/examples/HP
+NEB/examples		/usr/share/espresso/examples/NEB
+PHonon/examples		/usr/share/espresso/examples/PHonon
+PP/examples		/usr/share/espresso/examples/PP
+PW/examples		/usr/share/espresso/examples/PW
+PWCOND/examples		/usr/share/espresso/examples/PWCOND
+TDDFPT/examples		/usr/share/espresso/examples/TDDFPT

@@ -1,37 +1,36 @@
 --- a/environment_variables
 +++ b/environment_variables
-@@ -17,11 +17,11 @@
+@@ -68,10 +68,10 @@
  
- # The following should be good for most cases 
- 
--PREFIX=`cd ../../.. ; pwd`
-+PREFIX=/usr
- BIN_DIR=$PREFIX/bin
+ PREFIX=`cd ../../.. ; pwd`
+ # $PREFIX is the root of the Quantum ESPRESSO source tree.
+-BIN_DIR=$PREFIX/bin
 -PSEUDO_DIR=$PREFIX/pseudo
-+PSEUDO_DIR=$PREFIX/share/espresso/pseudo
++BIN_DIR=/usr/bin
++PSEUDO_DIR=$HOME/pseudo
  # Beware: everything in $TMP_DIR will be destroyed !
 -TMP_DIR=$PREFIX/tempdir
-+TMP_DIR=$(cd ../../..; pwd)/tempdir
- 
- # There should be no need to change anything below this line
- 
-@@ -58,7 +58,7 @@
- 
++TMP_DIR=/tmp/qe.$$
  
  PARA_PREFIX=" "
--PARA_PREFIX="mpirun -np 4"
-+
- #
- # available flags: 
- #                  -ni n        number of images        (or -nimage)
-@@ -77,8 +77,8 @@
+ # PARA_PREFIX="mpirun -np 4"
+@@ -93,8 +93,8 @@
  # number of processors in PARA_PREFIX and the number of images in
  # PARA_IMAGE_POSTFIX
- #
+ 
 -PARA_IMAGE_POSTFIX="-ni 2 $PARA_POSTFIX"
 -PARA_IMAGE_PREFIX="mpirun -np 4"
 +PARA_IMAGE_POSTFIX="-ni 1 $PARA_POSTFIX"
 +PARA_IMAGE_PREFIX=" "
  
- #
- # In case of mixed MPI / OpenMP parallelization you may want to limit the maximum
+ # In case of mixed MPI / OpenMP parallelization you may want to limit
+ # the maximum number to OpenMP threads so that the number of threads
+@@ -108,7 +108,7 @@
+ LC_ALL=C
+ export LC_ALL
+ 
+-NETWORK_PSEUDO=http://www.quantum-espresso.org/wp-content/uploads/upf_files/
++NETWORK_PSEUDO=https://pseudopotentials.quantum-espresso.org/upf_files/
+ 
+ # wget or curl needed if some PP has to be downloaded from web site
+ # script wizard will surely find a better way to find what is available

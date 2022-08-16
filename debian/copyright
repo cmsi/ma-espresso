@@ -1,375 +1,55 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: espresso
-Source: http://qe-forge.org/frs/?group_id=10
+Source: https://www.quantum-espresso.org/
 
 Files: *
-Copyright: 2001-2007 PWSCF group
-           2001-2016 Quantum ESPRESSO group
-Comment: PWSCF is the old name of Quantum ESPRESSO.
-  Upstream Authors are:
-  Paolo Giannozzi, Stefano Baroni, Nicola Bonini, Matteo Calandra, Roberto Car,
-  Carlo Cavazzoni, Davide Ceresoli, Guido L. Chiarotti, Matteo Cococcioni,
-  Ismaila Dabo, Andrea Dal Corso, Stefano Fabris, Guido Fratesi, Stefano de
-  Gironcoli, Ralph Gebauer, Uwe Gerstmann, Christos Gougoussis, Anton Kokalj,
-  Michele Lazzeri, Layla Martin-Samos, Nicola Marzari, Francesco Mauri,
-  Riccardo Mazzarello, Stefano Paolini, Alfredo Pasquarello, Lorenzo Paulatto,
-  Carlo Sbraccia, Sandro Scandolo, Gabriele Sclauzero, Ari P. Seitsonen,
-  Alexander Smogunov, Paolo Umari, Renata M. Wentzcovitch
-License: GPL-2
-
-Files: PW/bp_*
-Copyright: 2004 Vanderbilt group
-License: GPL-2
-
-Files: PW/generate_vdW_kernel_table.f90
-Copyright: 2009 Brian Kolb, Timo Thonhauser
-License: GPL-2
-
-Files: PW/h_epsi_her_*
-Copyright: 2005 Paolo Umari
-License: GPL-2
-
-Files: PW/wannier_*
-Copyright: 2008 Dmitry Korotin
-License: GPL-2
-
-Files: CPV/atoms_type.f90 CPV/berry_phase.f90 CPV/cg.f90 CPV/cp_emass.f90
-       CPV/cpr_mod.f90 CPV/dforceb.f90 CPV/efield.f90 CPV/eigs0.f90
-       CPV/ensemble_dft.f90 CPV/entropy.f90 CPV/fromscra.f90
-       CPV/inner_loop_cold.f90 CPV/ions_nose.f90 CPV/ions_positions.f90
-       CPV/ksstates.f90 CPV/mainvar.f90 CPV/metaxc.f90 CPV/nl_base.f90
-       CPV/polarization.f90 CPV/potentials.f90 CPV/pres_ai_mod.f90
-       CPV/print_out.f90 CPV/problem_size.f90 CPV/qmatrixd.f90 CPV/qqberry.f90
-       CPV/read_pseudo.f90 CPV/runcp.f90 CPV/spline.f90 CPV/stress.f90
-       CPV/wave_types.f90
-Copyright: 2002-2005 FPMD-CPV groups
-License: GPL-2
-
-Files: CPV/cp_autopilot.f90
-Copyright: 2005 Targacept, Inc.
-License: GPL-2
-
-Files: atomic/dir_outward.f90 atomic/dirsol.f90
-Copyright: 2002 Vanderbilt group
-License: GPL-2
-
-Files: clib/eval_infix.c
-Copyright: 2008 www.guidealgoritmi.it
-License: GPL-2
-
-Files: clib/fft_stick.c clib/indici.c clib/konst.h clib/memstat.c clib/qsort.c
-Copyright: 2002 FPMD group
-License: GPL-2
-
-Files: clib/fftw.* clib/konst.h
-Copyright: 1997 Massachusetts Institute of Technology
-License: GPL-2
-
-Files: clib/md5.h
-Copyright: 1999, 2002 Aladdin Enterprises
-License: GPL-2
-
-Files: flib/avrec.f90 flibe/transto.f90 flib/distools.f90
-       flib/more_functionals.f90
-Copyright: 2001-2002 FPMD group
-License: GPL-2
-
-Files: flib/deviatoric.f90
-Copyright: 2010 Davide Ceresoli
-License: GPL-2
-
-Files: flib/iglocal.f90
-Copyright: 2001-2004 Carlo Cavazzoni
-License: GPL-2
-
-Files: flib/flush_unit.f90
-Copyright: 2005 PWSCF-FPMD-CPV groups
-License: GPL-2
-
-Files: flib/sph_dbes.f90
-Copyright: 2001-2004 PWSCF-FPMD-CP90 group
-License: GPL-2
-
-Files: Modules/autopilot.f90
-Copyright: 2005 Targacept, Inc.
-License: GPL-2
-
-Files: Modules/descriptors.f90 Modules/fft_types.f90 Modules/printout_base.f90
-       Modules/timestep.f90 Modules/sic.f90 Modules/wave_base.f90
-       Modules/wavefunctions.f90 
-Copyright: 2002 FPMD group
-License: GPL-2
-
-Files: Modules/kernel_table.f90 Modules/xc_vdW_DF.f90
-Copyright: 2009 Brian Kolb, Timo Thonhauser
-License: GPL-2
-
-Files: Modules/mm_dispersion.f90
-Copyright: 2009 D. Forrer, M. Pavone
-License: GPL-2
-
-Files: Modules/parallel_include.f90
-Copyright: 2003-2004 Carlo Cavazzoni
-License: GPL-2
-
-Files: Modules/wannier_new.f90
-Copyright: 2006-2008 Dmitry Korotin
-License: GPL-2
-
-Files: NEB/path_interpolation.sh
-Copyright: 2004 Carlo Sbraccia
-License: GPL-2
-
-Files: NEB/path_merge.sh
-Copyright: 2007 Guido Fratesi
-License: GPL-2
-
-Files: PlotPhon/*
-Copyright: 2006-2007 Eyvaz Isaev
-License: GPL-2
-
-Files: PP/cft.f90
-Copyright: CERN
-License: GPL-2
-
-Files: PP/cube.f90
-Copyright: 2004 Axel Kohlmeyer
-License: GPL-2
-
-Files: PP/plot_whole_cell.f90
-Copyright: 2004 Tone Kokalj
-License: GPL-2
-
-Files: PP/qexml_example.f90
-Copyright: 2010 A. Ferretti
-License: GPL-2
-
-Files: PP/qexml.f90
-Copyright: 2006 WanT Group
-License: GPL-2
-
-Files: PP/sumpdos.f90
-Copyright: 2005 Andrea Ferretti
-License: GPL-2
-
-Files: PP/wannier_*0
-Copyright: 2006-2008 Dmitry Korotin
-License: GPL-2
-
-Files: PP/wfdd.f90
-Copyright: 2005 MANU, Yudong Wu, Nicola Marzari, Roberto Car
-License: GPL-2
-
-Files: PP/xsf.f90
-Copyright: 2003 Tone Kokalj
-License: GPL-2
-
-Files: PWCOND/*
-Copyright: 2003 A. Smogunov
-License: GPL-2
-
-Files: pwtools/bands_FS pwtools/f90 pwtools/kvecs_FS.f
-Copyright: 2005 Eyvaz Isaev
-License: GPL-2
-
-Files: pwtools/md_analyzer.sh
-Copyright: 2004 Guido Fratesi
-License: GPL-2
-
-Files: pwtools/pwi2xsf.sh pwtools/pwo2xsf.sh
-Copyright: 2004 Anton Kokalj
-License: GPL-2
-
-Files: pwtools/qeout2axsf.sh
-Copyright: 2006 Carlo Sbraccia
-License: GPL-2
-
-Files: QHA/*
-Copyright: 2005-2008 Eyvaz Isaev
-License: GPL-2
-
-Files: TDDFPT/*
-Copyright: 2009 Osman Baris Malcioglu
-License: GPL-2
-
-Files: TDDFPT/src/lr_charg_resp.f90
-Copyright: 2003 Tone Kokalj
-License: GPL-2
-
-Files: upftools/casino2upf.f90 upftools/upf2casino.f90
-Copyright: 2008, 2011 Simon Binnie
-License: GPL-2
-
-Files: debian/*
-Copyright: 2011-2014 Michael Banck <mbanck@debian.org>
-License: GPL-2
-
-License: GPL-2
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License version 2 as
- published by the Free Software Foundation.
+Comment: QUANTUM ESPRESSO is free software, released under the GNU
+ General Public License. See
+ http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt, or the file
+ License in the distribution).
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ We shall greatly appreciate if scientific work done using the QUANTUM
+ ESPRESSO distribution will contain an acknowledgment to the following
+ references:
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>
+ P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car, C. Cavazzoni,
+ D. Ceresoli, G. L. Chiarotti, M. Cococcioni, I. Dabo, A. Dal Corso,
+ S. Fabris, G. Fratesi, S. de Gironcoli, R. Gebauer, U. Gerstmann,
+ C. Gougoussis, A. Kokalj, M. Lazzeri, L. Martin-Samos, N. Marzari,
+ F. Mauri, R. Mazzarello, S. Paolini, A. Pasquarello, L. Paulatto,
+ C. Sbraccia, S. Scandolo, G. Sclauzero, A. P. Seitsonen, A. Smogunov,
+ P. Umari, R. M. Wentzcovitch, J.Phys.: Condens.Matter 21, 395502
+ (2009)
  .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
-
-Files: archive/iotk-1.2.beta.tar.gz S3DE/*
-Copyright: 2004-2006 Giovanni Bussi
-Comment: The external iotk library as found in archive/iotk-1.2.beta.tar.gz is
-  getting extracted to S3DE during the build.
-License: LGPL-2
- This package is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License version 2 as published by the Free Software Foundation
+ and
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
+ P. Giannozzi, O. Andreussi, T. Brumme, O. Bunau, M. Buongiorno
+ Nardelli, M. Calandra, R. Car, C. Cavazzoni, D. Ceresoli,
+ M. Cococcioni, N. Colonna, I. Carnimeo, A. Dal Corso, S. de Gironcoli,
+ P. Delugas, R. A. DiStasio Jr, A. Ferretti, A. Floris, G. Fratesi,
+ G. Fugallo, R. Gebauer, U. Gerstmann, F. Giustino, T. Gorni, J Jia,
+ M. Kawamura, H.-Y. Ko, A. Kokalj, E. Küçükbenli, M .Lazzeri,
+ M. Marsili, N. Marzari, F. Mauri, N. L. Nguyen, H.-V. Nguyen,
+ A. Otero-de-la-Roza, L. Paulatto, S. Poncé, D. Rocca, R. Sabatini,
+ B. Santra, M. Schlipf, A. P. Seitsonen, A. Smogunov, I. Timrov,
+ T. Thonhauser, P. Umari, N. Vast, X. Wu, S. Baroni, J.Phys.:
+ Condens.Matter 29, 465901 (2017)
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
+ Users of the GPU-enabled version should also cite the following paper:
  .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in "/usr/share/common-licenses/LGPL-2".
-
-Files: archive/fox.tgz FoX/*
-Copyright: 2005-2009 Toby White <tow@uszla.me.uk>
-           2007-2009 Gen-Tao Chiang <gtc25@cam.ac.uk>
-           2008-2012 Andrew Walker <a.walker@ucl.ac.uk>
-License: BSD-3-Clause
- * Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are
- met:
+ P. Giannozzi, O. Baseggio, P. Bonfà, D. Brunato, R. Car, I. Carnimeo,
+ C. Cavazzoni, S. de Gironcoli, P. Delugas, F. Ferrari Ruffino,
+ A. Ferretti, N. Marzari, I. Timrov, A. Urru, S. Baroni,
+ J. Chem. Phys. 152, 154105 (2020)
  .
- * Redistributions of source code must retain the above copyright notice,
- this list of conditions and the following disclaimer.
+ Note the form QUANTUM ESPRESSO for textual citations of the
+ code. Please also see package-specific documentation for further
+ recommended citations. Pseudopotentials should be cited as (for
+ instance)
  .
- * Redistributions in binary form must reproduce the above copyright
- notice, this list of conditions and the following disclaimer in the
- documentation and/or other materials provided with the distribution.
+ We used the pseudopotentials C.pbe-rrjkus.UPF and O.pbe-vbc.UPF from
+ http://www.quantum-espresso.org.
  .
- * Neither the name of the copyright holder nor the names of its
- contributors may be used to endorse or promote products derived from
- this software without specific prior written permission.
- .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT
- OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-Files: archive/fox.tgz FoX/utils/*
-Copyright: Scott Robert Ladd
-License: Zlib
- This computer program source file is supplied "AS IS". Scott Robert
- Ladd (hereinafter referred to as "Author") disclaims all warranties,
- expressed or implied, including, without limitation, the warranties
- of merchantability and of fitness for any purpose. The Author
- assumes no liability for direct, indirect, incidental, special,
- exemplary, or consequential damages, which may result from the use
- of this software, even if advised of the possibility of such damage.
- .
- The Author hereby grants anyone permission to use, copy, modify, and
- distribute this source code, or portions hereof, for any purpose,
- without fee, subject to the following restrictions:
- .
- 1. The origin of this source code must not be misrepresented.
- .
- 2. Altered versions must be plainly marked as such and must not
- be misrepresented as being the original source.
- .
- 3. This Copyright notice may not be removed or altered from any
- source or altered source distribution.
- .
- The Author specifically permits (without fee) and encourages the use
- of this source code for entertainment, education, or decoration. If
- you use this source code in a product, acknowledgment is not required
- but would be appreciated.
-
-Files: archive/lapack-3.6.1.tgz
-Copyright: 1992-2016 The University of Tennessee and The University of Tennessee Research Foundation
-           2000-2016 The University of California Berkeley
-           2006-2016 The University of Colorado Denver
-License: BSD-3-Clause
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are
- met:
- .
- - Redistributions of source code must retain the above copyright
-   notice, this list of conditions and the following disclaimer.
- .
- - Redistributions in binary form must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer listed
-   in this license in the documentation and/or other materials
-   provided with the distribution.
- .
- - Neither the name of the copyright holders nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
- .
- The copyright holders provide no reassurances that the source code
- provided does not infringe any patent, copyright, or any other
- intellectual property rights of third parties.  The copyright holders
- disclaim any liability to any recipient for claims brought against
- recipient by any third party for infringement of that parties
- intellectual property rights.
- .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-Files: archive/plumed-1.3-qe.tar.gz
-Copyright: The PLUMED Developers Team
-License: GPL-3 or LGPL-3
-
-License: GPL-3
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- --
- The complete text of the GNU General Public License version 3 can be found in
- `/usr/share/common-licenses/GPL-3'.
-
-License: LGPL-3
- This package is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; version 3
- of the License.
- .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in "/usr/share/common-licenses/LGPL-3".
+ References for all exchange-correlation functionals can be found
+ inside file Modules/funct.f90.
+License: GPL-2

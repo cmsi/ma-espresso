@@ -1,63 +1,7 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
 
-#export DH_VERBOSE=1
-
-include /usr/share/dpkg/architecture.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/cmake.mk
 include /usr/share/mpi-default-dev/debian_defaults
 
-DEB_RELEASE ?= $(shell lsb_release -c -s)
-export SCALAPACK_LIBS:=-lscalapack-$(ARCH_DEFAULT_MPI_IMPL)
-ifeq ($(DEB_RELEASE), stretch)
-    export SCALAPACK_LIBS:=-lscalapack-$(ARCH_DEFAULT_MPI_IMPL) -lblacs-$(ARCH_DEFAULT_MPI_IMPL) -lblacsF77init-$(ARCH_DEFAULT_MPI_IMPL)
-endif
-export SCALAPACK_LIB:=/usr/lib
-ifeq ($(DEB_BUILD_ARCH_CPU), i386)
-    export FFTW_FORCE_ALIGN=-D_FFTW_FORCE_UNALIGNED
-else
-    export FFTW_FORCE_ALIGN=
-endif
-export LDFLAGS=-fopenmp
-export OMPI_MCA_orte_rsh_agent=/bin/false
-
-# workaround for dpkg exporting conflicting DFLAGS since #975896
-export DFLAGS
-
-%:
-	dh $@
-
-override_dh_auto_clean:
-	-dh_auto_clean
-	rm -rf CPV/tmp
-	rm -f install/make_wannier90.sys
-	rm -f install/make_lapack.inc
-	rm -f install/make_blas.inc
-	rm -f include/fft_defs.h
-	rm -f Modules/version.f90.tmp
-	rm -f include/configure.h
-
-override_dh_auto_configure:
-	dh_auto_configure -- --enable-openmp
-
-override_dh_auto_build-arch:
-	$(MAKE) all epw
-
-override_dh_auto_build-indep:
-	$(MAKE) pw
-	cp debian/pseudo/*.UPF pseudo/
-	$(MAKE) -C Doc pdf
-
-override_dh_auto_test:
-	/bin/true
-
-override_dh_installexamples-indep:
-	for DIR in $$(find . -name debian -prune -o -name .pc -prune -o -name examples -print); \
-	do dh_install -p quantum-espresso-data $$DIR/* usr/share/espresso/examples/$$(dirname $$DIR)/examples; \
-	done
-
-override_dh_installchangelogs:
-	dh_installchangelogs Doc/release-notes
-
-override_dh_fixperms-indep:
-	dh_fixperms
-	find debian/quantum-espresso-data/usr/share/espresso/examples -name \*.in | xargs chmod 644
+DEB_CMAKE_EXTRA_FLAGS = -DQE_ENABLE_SCALAPACK=ON -DSCALAPACK_LIBRARIES=libscalapack-$(ARCH_DEFAULT_MPI_IMPL).so
