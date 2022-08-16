@@ -1,6 +1,6 @@
 --- a/environment_variables
 +++ b/environment_variables
-@@ -68,10 +68,10 @@
+@@ -68,10 +68,11 @@
  
  PREFIX=`cd ../../.. ; pwd`
  # $PREFIX is the root of the Quantum ESPRESSO source tree.
@@ -8,13 +8,14 @@
 -PSEUDO_DIR=$PREFIX/pseudo
 +BIN_DIR=/usr/bin
 +PSEUDO_DIR=$HOME/pseudo
++mkdir -p $PSEUDO_DIR
  # Beware: everything in $TMP_DIR will be destroyed !
 -TMP_DIR=$PREFIX/tempdir
 +TMP_DIR=/tmp/qe.$$
  
  PARA_PREFIX=" "
  # PARA_PREFIX="mpirun -np 4"
-@@ -93,8 +93,8 @@
+@@ -93,8 +94,8 @@
  # number of processors in PARA_PREFIX and the number of images in
  # PARA_IMAGE_POSTFIX
  
