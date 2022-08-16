@@ -1,5 +1,8 @@
 pseudo			/usr/share/espresso
 Doc/user_guide.pdf	/usr/share/espresso
+Doc/brillouin_zones.pdf	/usr/share/espresso
+Doc/constraints_HOWTO.pdf	/usr/share/espresso
+Doc/plumed_quick_ref.pdf	/usr/share/espresso
 environment_variables	/usr/share/espresso/examples
 CPV/examples		/usr/share/espresso/examples/CPV
 EPW/examples		/usr/share/espresso/examples/EPW
